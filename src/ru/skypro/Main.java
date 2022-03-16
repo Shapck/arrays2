@@ -3,7 +3,7 @@ package ru.skypro;
 public class Main {
 
     public static void main(String[] args) {
-        task4();
+        task2();
     }
 
     public static void task1() {
@@ -18,18 +18,18 @@ public class Main {
     public static void task2() {
         int array[] = generateRandomArray();
         int max = -1;
+        int min = 0;
         for (int i = 0; i < array.length; i++) {
             if(array[i] > max) {
                 max = array[i];
             }
-        }
+             min = max;
 
-        int min = max;
-        for (int i = 0; i < array.length; i++) {
-            if(array[i] < min){
+            if (array[i] < min){
                 min = array[i];
             }
         }
+
         System.out.println("Минимальная сумма трат за день составила " + min + " рублей. Максимальная сумма трат за день составила " + max + " рублей");
     }
 
